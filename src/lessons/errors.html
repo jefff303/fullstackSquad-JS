@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/style.css">
+    <title>La gestion d'erreurs | Jefff303.js</title>
+</head>
+
+<body class="min-h-screen bg-base-200">
+    <div class="drawer min-h-screen">
+        <input id="drawer-toggle" type="checkbox" class="drawer-toggle" />
+        <div class="drawer-content flex flex-col min-h-screen">
+
+            <div id="navbar-container"></div>
+
+            <main class="flex-1 container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
+                <a class="link" href="/index.html">Home</a>
+
+                <section class="text-center mb-10">
+                    <h1 class="text-4xl font-bold mb-4">La gestion d'erreurs en JavaScript</h1>
+                    <p class="text-lg text-base-content/70 max-w-2xl mx-auto">
+                        La gestion des erreurs est cruciale pour créer des applications robustes et fiables. Elle permet
+                        de contrôler le comportement de votre programme en cas d'imprévus ou d'erreurs d'exécution.
+                    </p>
+                </section>
+
+                <section class="mb-12">
+                    <div class="card bg-base-100 shadow-xl">
+                        <div class="card-body">
+                            <h2 class="card-title text-2xl">👉 Pourquoi gérer les erreurs ?</h2>
+                            <ul class="list-disc list-inside space-y-2 mt-3">
+                                <li>Empêcher le programme de crasher en cas de problème (ex: données manquantes,
+                                    connexion échouée).</li>
+                                <li>Fournir un retour clair et utile à l'utilisateur ou au développeur.</li>
+                                <li>Assurer que le code s'exécute comme prévu, même dans des scénarios imprévus.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-12">
+                    <div class="card bg-primary text-primary-content shadow-lg">
+                        <div class="card-body">
+                            <h2 class="card-title text-2xl">⚡ L'instruction `try...catch...finally`</h2>
+                            <p class="mb-4">
+                                Ce bloc de code permet de gérer les erreurs. Le code susceptible de provoquer une erreur
+                                est placé dans le bloc <span class="badge badge-primary">`try`</span>. Si une <span
+                                    class="badge badge-secondary">`exception`</span> est levée, le code du bloc <span
+                                    class="badge badge-accent">`catch`</span> s'exécute. Le bloc <span
+                                    class="badge badge-info">`finally`</span> s'exécute toujours, qu'il y ait une erreur
+                                ou non.
+                            </p>
+                            <pre class="mockup-code text-left">
+                <code>
+try {
+  // Code à surveiller
+  const resultat = 10 / uneVariableNonDefinie;
+  console.log(resultat);
+} catch (erreur) {
+  // Code à exécuter si une erreur survient
+  console.error('Une erreur est survenue :', erreur.message);
+} finally {
+  // Code qui s'exécute toujours
+  console.log('Opération terminée.');
+}
+// Affiche :
+// Une erreur est survenue : uneVariableNonDefinie is not defined
+// Opération terminée.
+                </code>
+              </pre>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-12">
+                    <div class="card bg-base-100 shadow-lg">
+                        <div class="card-body">
+                            <h2 class="card-title text-2xl">🌱 Exceptions et le mot-clé `throw`</h2>
+                            <p class="mb-4">
+                                Une **exception** est un événement anormal qui se produit pendant l'exécution d'un
+                                programme. Le mot-clé <span class="badge badge-primary">`throw`</span> vous permet de
+                                **lever** manuellement une exception, ce qui peut être utile pour valider des entrées.
+                            </p>
+                            <pre class="mockup-code text-left">
+                <code>
+function verifierAge(age) {
+  if (age < 18) {
+    throw new Error('Vous devez avoir 18 ans ou plus.');
+  }
+  return 'Bienvenue !';
+}
+
+try {
+  const message = verifierAge(15);
+  console.log(message);
+} catch (e) {
+  console.error('Erreur :', e.message);
+}
+// Affiche : 'Erreur : Vous devez avoir 18 ans ou plus.'
+                </code>
+              </pre>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="card bg-neutral text-neutral-content shadow-xl">
+                        <div class="card-body">
+                            <h2 class="card-title text-2xl">✅ Bonnes pratiques</h2>
+                            <ul class="list-disc list-inside space-y-2 mt-3">
+                                <li>N'utilisez `try...catch` que pour des erreurs que vous ne pouvez pas éviter (erreurs
+                                    d'exécution).</li>
+                                <li>Utilisez `if` pour valider des conditions attendues (ex: une variable est-elle
+                                    définie ?).</li>
+                                <li>Levez des exceptions (`throw`) avec des messages clairs et descriptifs.</li>
+                                <li>Utilisez le `finally` pour des opérations de nettoyage, comme la fermeture d'une
+                                    connexion.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <div id="footer-container"></div>
+        </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+    <script>
+            try {
+                prenom
+                alert('Bonjour');
+            } 
+            catch (err) {
+                alert(`Erreur Détectée ALERTE STOPPEZ TOUT: 
+        -----------
+        Le Nom de l'erreur 
+        ${err.name}
+        -----------
+        Le Message de l'erreur  :
+        ${err.message}
+        ----------
+        L'emplacement de l'erreur:
+        ${err.stack}`);
+            }
+//             finally{
+//     alert(`Ce message s'affichera quoiqu'il arrive`);
+// }
+            alert(`Ce message s'affiche correctement`);
+
+    </script>
+</body>
+
+</html>

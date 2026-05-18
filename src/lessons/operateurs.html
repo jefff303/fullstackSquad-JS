@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/style.css">
+    <title>Les opérateurs de comparaison et la ternaire | Jefff303.js</title>
+</head>
+
+<body class="min-h-screen bg-base-200">
+    <div class="drawer min-h-screen">
+        <input id="drawer-toggle" type="checkbox" class="drawer-toggle" />
+        <div class="drawer-content flex flex-col min-h-screen">
+
+            <div id="navbar-container"></div>
+
+            <main class="flex-1 container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
+                <a class="link" href="/index.html">Home</a>
+
+                <section class="text-center mb-10">
+                    <h1 class="text-4xl font-bold mb-4">Les opérateurs de comparaison et la ternaire</h1>
+                    <p class="text-lg text-base-content/70 max-w-2xl mx-auto">
+                        En JavaScript, les opérateurs de comparaison permettent de comparer deux valeurs et de renvoyer
+                        un booléen (`true` ou `false`). La condition ternaire offre un raccourci pour les instructions
+                        `if/else` simples.
+                    </p>
+                </section>
+
+                <section class="mb-12">
+                    <div class="card bg-base-100 shadow-xl">
+                        <div class="card-body">
+                            <h2 class="card-title text-2xl">👉 Les opérateurs de comparaison</h2>
+                            <p class="mb-4">
+                                Ils sont essentiels pour créer des conditions dans votre code. Le résultat de ces
+                                opérations est toujours un booléen.
+                            </p>
+                            <div class="overflow-x-auto">
+                                <table class="table w-full">
+                                    <thead>
+                                        <tr>
+                                            <th>Opérateur</th>
+                                            <th>Nom</th>
+                                            <th>Exemple</th>
+                                            <th>Résultat</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><code>==</code></td>
+                                            <td>Égalité (valeur seule)</td>
+                                            <td><code>5 == '5'</code></td>
+                                            <td><code>true</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>===</code></td>
+                                            <td>Égalité stricte (valeur et type)</td>
+                                            <td><code>5 === '5'</code></td>
+                                            <td><code>false</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>!=</code></td>
+                                            <td>Inégalité (valeur seule)</td>
+                                            <td><code>10 != 8</code></td>
+                                            <td><code>true</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>!==</code></td>
+                                            <td>Inégalité stricte</td>
+                                            <td><code>10 !== '10'</code></td>
+                                            <td><code>true</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>></code></td>
+                                            <td>Supérieur à</td>
+                                            <td><code>7 > 3</code></td>
+                                            <td><code>true</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code><</code></td>
+                                            <td>Inférieur à</td>
+                                            <td><code>7 < 3</code></td>
+                                            <td><code>false</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>>=</code></td>
+                                            <td>Supérieur ou égal à</td>
+                                            <td><code>5 >= 5</code></td>
+                                            <td><code>true</code></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code><=</code></td>
+                                            <td>Inférieur ou égal à</td>
+                                            <td><code>5 <= 3</code></td>
+                                            <td><code>false</code></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mb-12">
+                    <div class="card bg-primary text-primary-content shadow-lg">
+                        <div class="card-body">
+                            <h2 class="card-title text-2xl">⚡ La condition ternaire</h2>
+                            <p class="mb-4">
+                                C'est une version compacte de l'instruction `if/else`. Elle se compose de trois parties
+                                : une condition, une valeur si la condition est vraie, et une valeur si elle est fausse.
+                            </p>
+                            <pre class="mockup-code text-left">
+                <code>
+// Syntaxe :
+// condition ? valeur_si_vrai : valeur_si_faux;
+
+const age = 20;
+const statut = age >= 18 ? 'Majeur' : 'Mineur';
+console.log(statut); // Affiche 'Majeur'
+
+// Sans la ternaire, cela serait :
+let statutIf;
+if (age >= 18) {
+  statutIf = 'Majeur';
+} else {
+  statutIf = 'Mineur';
+}
+                </code>
+              </pre>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="card bg-neutral text-neutral-content shadow-xl">
+                        <div class="card-body">
+                            <h2 class="card-title text-2xl">✅ Bonnes pratiques</h2>
+                            <ul class="list-disc list-inside space-y-2 mt-3">
+                                <li>Utilisez toujours l'égalité stricte <code>===</code> et l'inégalité stricte
+                                    <code>!==</code> pour éviter les erreurs de conversion de type.</li>
+                                <li>N'utilisez la ternaire que pour des conditions simples afin de ne pas rendre le code
+                                    illisible.</li>
+                                <li>Pour les conditions plus complexes, privilégiez les instructions `if/else` ou
+                                    `switch`.</li>
+                                <li>Pensez à utiliser les opérateurs logiques (`&&`, `||`, `!`) pour combiner plusieurs
+                                    conditions.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <div id="footer-container"></div>
+        </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
