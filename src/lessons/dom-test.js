@@ -15,13 +15,17 @@
 // console.log(allLolClassElements);
 
 
-const parag1 = document.querySelector('h1');
+const titleH1 = document.querySelector('h1');
 const paragId = document.querySelector('#paragraph');
-console.log(parag1);
+console.log(titleH1);
 console.log(paragId);
 
 const allPelements = document.querySelectorAll('.lol');
-console.log(allPelements[2].textContent);
-allPelements[2].textContent = 'Hello la fullstackSquad seconde edition';
+// console.log(allPelements[2].textContent);
+// allPelements[2].textContent = 'Hello la fullstackSquad seconde edition';
+
+// on va inserer le paragraphe avec l'id "paragraph" avant le titre h1
+
+
 
 
