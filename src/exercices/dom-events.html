@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercice DOM Creation</title>
+    <link rel="stylesheet" href="../style.css">
+    <!-- <style>
+        body{
+            min-height: 10000vh;
+        }
+    </style> -->
 </head>
-<body>
-    <a href="../../index.html">Home</a>
 
-    <h1>Hello World</h1>
-    
+<body>
+    <a class="link" href="../../index.html">Home</a>
+
+    <h1 class="text-7xl mb-5">Hello World</h1>
+    <h2 class="text-5xl mb-3">Welcome (Event Click + ClassList)</h2>
+    <button id="btn-add" class="btn-exo-classList btn btn-success">Ajouter Classe</button>
+    <button id="btn-remove" class="btn-exo-classList btn btn-warning">Suppr. Classe</button>
+    <button id="btn-toggle" class="btn-exo-classList btn btn-error">Toggle Classe</button>
     <script src="dom-events.js"></script>
 </body>
+
 </html>

@@ -1,2 +1,8 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+.superClass{
+background-color:violet;
+color : white;
+border : 3px solid red;
+}
