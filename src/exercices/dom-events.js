@@ -39,7 +39,7 @@ allBtn[0].addEventListener('click', () => {
 allBtn[1].addEventListener('click', () => {
     console.log('Click sur REMOVE');
     secondTitle.classList.remove('superClass')
-    
+
 });
 allBtn[2].addEventListener('click', () => {
     console.log('Click sur TOGGLE');
@@ -86,20 +86,11 @@ allBtn[2].addEventListener('click', () => {
 const inputExoFocus = document.querySelector('#input-exercice-focus-blur');
 // console.log(inputExoFocus);
 
-inputExoFocus.addEventListener('focus',()=>{
+inputExoFocus.addEventListener('focus', () => {
     inputExoFocus.style.backgroundColor = "blue";
     inputExoFocus.style.color = 'white';
 });
-inputExoFocus.addEventListener('blur',()=>{
+inputExoFocus.addEventListener('blur', () => {
     inputExoFocus.style.backgroundColor = "transparent";
     inputExoFocus.style.color = 'black';
 });
-
-
-
-
-
-
-
-
-
