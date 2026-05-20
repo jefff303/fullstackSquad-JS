@@ -31,10 +31,10 @@ const allBtn = document.querySelectorAll('.btn-exo-classList');
 // console.log(allBtn[1]);
 // console.log(allBtn[2]);
 
-// allBtn[0].addEventListener('click', () => {
-//     console.log('Click sur ADD');
-//     secondTitle.classList.add('superClass')
-// });
+allBtn[0].addEventListener('click', () => {
+    console.log('Click sur ADD');
+    secondTitle.classList.add('superClass')
+});
 
 allBtn[1].addEventListener('click', () => {
     console.log('Click sur REMOVE');
@@ -54,12 +54,46 @@ allBtn[2].addEventListener('click', () => {
 //TODO 3 : On crée une image (avec la position en absolute), avec top et left on la place aux coord du click (on oublie pas un petit append pour qu'elle s'affiche)  
 
 
-document.addEventListener('click',(clickEvent)=>{
-    console.log('clickEvent',clickEvent);
-    console.log('clickEvent Coord X',clickEvent.x);
-    console.log('clickEvent Coord Y',clickEvent.y);
-    
-})
+// document.addEventListener('click',(clickEvent)=>{
+//     // console.log('clickEvent',clickEvent);
+//     // console.log('clickEvent Coord X',clickEvent.x);
+//     // console.log('clickEvent Coord Y',clickEvent.y);
+
+//     const newImage = document.createElement('img');
+//     newImage.src = 'https://picsum.photos/200/300';
+//     newImage.style.position = 'absolute';
+//     newImage.style.left = clickEvent.x + 'px';
+//     newImage.style.top = clickEvent.y + 'px';
+//     document.body.append(newImage);
+// });
+// document.addEventListener('click',(clickEvent)=>{
+//     // console.log('clickEvent',clickEvent);
+//     // console.log('clickEvent Coord X',clickEvent.x);
+//     // console.log('clickEvent Coord Y',clickEvent.y);
+
+//     const newImage = document.createElement('img');
+//     const imageSize = 300;
+//     newImage.src = `https://picsum.photos/${imageSize}/${imageSize}`;
+//     newImage.style.position = 'absolute';
+//     newImage.style.left = clickEvent.x - imageSize/2 + 'px';
+//     newImage.style.top = clickEvent.y - imageSize/2 + 'px';
+//     document.body.append(newImage);
+// });
+
+//!Exercice sur un input on réagit au focus pour changer la couleur de fond de l'input
+//! Ensuite on réagit au blur pour remettre sa couleur de base (transparent) 
+
+const inputExoFocus = document.querySelector('#input-exercice-focus-blur');
+// console.log(inputExoFocus);
+
+inputExoFocus.addEventListener('focus',()=>{
+    inputExoFocus.style.backgroundColor = "blue";
+    inputExoFocus.style.color = 'white';
+});
+inputExoFocus.addEventListener('blur',()=>{
+    inputExoFocus.style.backgroundColor = "transparent";
+    inputExoFocus.style.color = 'black';
+});
 
 
 

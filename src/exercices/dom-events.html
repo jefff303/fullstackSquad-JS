@@ -1,26 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercice DOM Creation</title>
+    <title>Exercice DOM Events</title>
     <link rel="stylesheet" href="../style.css">
-    <!-- <style>
-        body{
-            min-height: 10000vh;
-        }
-    </style> -->
 </head>
 
-<body>
-    <a class="link" href="../../index.html">Home</a>
+<body class="bg-base-200 min-h-screen">
+    <div class="container mx-auto w-full max-w-none px-4 sm:px-6 lg:px-8 py-6 flex flex-col gap-6">
+        <a class="link " href="../../index.html">Home</a>
 
-    <h1 class="text-7xl mb-5">Hello World</h1>
-    <h2 class="text-5xl mb-3">Welcome (Event Click + ClassList)</h2>
-    <button id="btn-add" class="btn-exo-classList btn btn-success">Ajouter Classe</button>
-    <button id="btn-remove" class="btn-exo-classList btn btn-warning">Suppr. Classe</button>
-    <button id="btn-toggle" class="btn-exo-classList btn btn-error">Toggle Classe</button>
+        <h1 class="text-4xl sm:text-5xl lg:text-7xl mb-2">Hello World</h1>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl mb-2">Welcome (Event Click + ClassList)</h2>
+
+        <div class="flex flex-wrap gap-2">
+            <button id="btn-add" type="button" class="btn-exo-classList btn btn-success">Ajouter Classe</button>
+            <button id="btn-remove" type="button" class="btn-exo-classList btn btn-warning">Suppr. Classe</button>
+            <button id="btn-toggle" type="button" class="btn-exo-classList btn btn-error">Toggle Classe</button>
+        </div>
+
+        <fieldset class="fieldset w-full max-w-xl">
+            <legend class="fieldset-legend">On réagit au focus & au blur</legend>
+            <input id="input-exercice-focus-blur" type="text" class="input input-bordered w-full" placeholder="Type here" />
+        </fieldset>
+    </div>
+
     <script src="dom-events.js"></script>
 </body>
 
