@@ -1,0 +1,5 @@
+[
+    { "id": 1, "nom": "Pikachu", "type": "Électrik" },
+    { "id": 2, "nom": "Salamèche", "type": "Feu" },
+    { "id": 3, "nom": "Carapuce", "type": "Eau" }
+  ]

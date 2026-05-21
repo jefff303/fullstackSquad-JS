@@ -94,3 +94,68 @@ inputExoFocus.addEventListener('blur', () => {
     inputExoFocus.style.backgroundColor = "transparent";
     inputExoFocus.style.color = 'black';
 });
+
+//! Exercice DOM Events (mouseleave)
+const h3Title = document.querySelector('#mouseEscroc');
+// const mainContainer = document.querySelector('#mainContainer');
+// let lesImagesFirst = document.querySelectorAll(`img`)[0];
+// console.log(h3Title);
+
+document.addEventListener('mouseleave',()=>{
+    //? Comme vu pour les objets on peux accéder aux propriétés dans l'objet style de l'element 
+    h3Title.style.display = 'block';
+    h3Title.style.color = 'red';
+    h3Title.style.backgroundColor = 'chartreuse';
+    h3Title.innerText = 'Tu as gagné 1 millions de Dollars';
+    h3Title.style.textAlign = 'center';
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//! Ecouter le clavier en passant par l'event 
+document.addEventListener('keyup',(clavierEvent)=>{
+    console.log(clavierEvent);
+    console.log(clavierEvent.key);
+    
+
+})
+
+//!Exercice DOM Events (keyup)
+// const myInput = document.querySelectorAll("input");
+// console.log(myInput.value);

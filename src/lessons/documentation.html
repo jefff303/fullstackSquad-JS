@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="cupcake">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leçon : L'Importance Cruciale du README et de la Documentation</title>
+    <link rel="stylesheet" href="../style.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" /> -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-base-200 min-h-screen text-base-content font-sans">
+    <main class="max-w-4xl mx-auto px-4 py-8 md:py-12">
+        <a href="../../index.html" class="link">Home</a>
+
+        
+        <div class="card bg-base-100 shadow-xl mb-8 overflow-hidden border border-base-300">
+            <div class="card-body p-6 md:p-10">
+                <div class="flex items-center gap-2 text-sm font-semibold text-secondary uppercase tracking-wider mb-2">
+                    <i class="fa-solid fa-book-open"></i> Leçon du jour
+                </div>
+                <h1 class="card-title text-3xl md:text-4xl font-extrabold text-neutral mb-4 leading-tight">
+                    Pourquoi le fichier <span class="text-primary">README.md</span> est-il le fichier le plus important de votre projet ?
+                </h1>
+                <p class="text-base-content/80 text-base md:text-lg leading-relaxed">
+                    Un projet sans documentation est un projet mort. Que ce soit pour vos futurs collaborateurs, pour les recruteurs qui parcourent votre GitHub, ou même pour <strong>vous-même</strong> dans six mois, le fichier <code class="kbd kbd-sm bg-neutral text-neutral-content">README</code> est la vitrine et le manuel de vol de votre application.
+                </p>
+                <div class="divider my-4"></div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center mt-2">
+                    <div class="p-3 bg-base-200 rounded-xl">
+                        <div class="text-xl font-bold text-primary">0 min</div>
+                        <div class="text-xs opacity-70">Temps à perdre en configuration</div>
+                    </div>
+                    <div class="p-3 bg-base-200 rounded-xl">
+                        <div class="text-xl font-bold text-secondary">100%</div>
+                        <div class="text-xs opacity-70">D'impact sur vos recruteurs</div>
+                    </div>
+                    <div class="p-3 bg-base-200 rounded-xl">
+                        <div class="text-xl font-bold text-accent">Zéro</div>
+                        <div class="text-xs opacity-70">Frustration au déploiement</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="collapse collapse-plus bg-base-100 shadow-md border border-base-300 mb-4">
+            <input type="radio" name="lesson-accordion" checked="checked" /> 
+            <div class="collapse-title text-lg md:text-xl font-bold text-neutral flex items-center gap-3">
+                <span class="bg-primary text-primary-content rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">1</span>
+                Le rôle d'un fichier README
+            </div>
+            <div class="collapse-content px-6 pb-6">
+                <p class="mb-4 text-sm md:text-base">
+                    Le terme <strong>README</strong> vient de l'anglais et signifie littéralement <em>"Lisez-moi"</em>. C'est le premier fichier qu'un humain (ou un robot) doit ouvrir en arrivant sur votre dépôt de code. Il répond à 3 questions vitales :
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="card bg-info/10 border border-info/20 p-4 rounded-xl">
+                        <h4 class="font-bold text-info mb-1"><i class="fa-solid fa-circle-question mr-1"></i> Quoi ?</h4>
+                        <p class="text-xs md:text-sm">Qu'est-ce que fait cette application ? Quel problème résout-elle ?</p>
+                    </div>
+                    <div class="card bg-success/10 border border-success/20 p-4 rounded-xl">
+                        <h4 class="font-bold text-success mb-1"><i class="fa-solid fa-gears mr-1"></i> Comment ?</h4>
+                        <p class="text-xs md:text-sm">Comment l'installer, configurer les variables d'environnement et la lancer ?</p>
+                    </div>
+                    <div class="card bg-warning/10 border border-warning/20 p-4 rounded-xl">
+                        <h4 class="font-bold text-warning mb-1"><i class="fa-solid fa-code-fork mr-1"></i> Qui & Où ?</h4>
+                        <p class="text-xs md:text-sm">Qui l'a fait, sous quelle licence, et comment peut-on y contribuer ?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="collapse collapse-plus bg-base-100 shadow-md border border-base-300 mb-4">
+            <input type="radio" name="lesson-accordion" /> 
+            <div class="collapse-title text-lg md:text-xl font-bold text-neutral flex items-center gap-3">
+                <span class="bg-secondary text-secondary-content rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">2</span>
+                Le syndrome du "Ça marche sur ma machine" 💻💥
+            </div>
+            <div class="collapse-content px-6 pb-6">
+                <p class="mb-4 text-sm md:text-base">
+                    Sans un bon README détaillant <strong>l'environnement du projet</strong>, vous vous exposez à de graves problèmes d'équipe et d'organisation :
+                </p>
+                <div class="alert alert-error shadow-sm mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    <span class="text-sm"><strong>Perte de temps massive :</strong> Un nouveau développeur mettra 3 jours à lancer le projet au lieu de 5 minutes.</span>
+                </div>
+                <div class="alert alert-warning shadow-sm mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+                    <span class="text-sm"><strong>Bugs d'environnement :</strong> Oublier de préciser la version exacte de Node.js peut casser l'application en production.</span>
+                </div>
+                <div class="alert alert-neutral shadow-sm">
+                    <i class="fa-solid fa-ghost text-xl"></i>
+                    <span class="text-sm"><strong>Effet "Projet Fantôme" :</strong> Un recruteur qui clique sur votre GitHub, ne voit pas de README, quitte votre profil en 3 secondes sans regarder votre superbe code.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="collapse collapse-plus bg-base-100 shadow-md border border-base-300 mb-8">
+            <input type="radio" name="lesson-accordion" /> 
+            <div class="collapse-title text-lg md:text-xl font-bold text-neutral flex items-center gap-3">
+                <span class="bg-accent text-accent-content rounded-lg w-8 h-8 flex items-center justify-center text-sm font-bold">3</span>
+                La structure type à adopter absolument
+            </div>
+            <div class="collapse-content px-6 pb-6">
+                <p class="mb-4 text-sm md:text-base">
+                    Voici les sections indispensables à intégrer à la racine de votre projet dans votre fichier <code class="text-secondary font-mono">README.md</code> :
+                </p>
+                
+                <div class="overflow-x-auto rounded-xl border border-base-300">
+                    <table class="table table-zebra w-full text-xs md:text-sm">
+                        <thead>
+                            <tr class="bg-base-300 font-bold text-neutral">
+                                <th>Section</th>
+                                <th>Description / Objectif</th>
+                                <th>Exemple</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-bold text-primary"># Titre & Badges</td>
+                                <td>Nom clair de l'application et statut (build, couverture de test)</td>
+                                <td><code># PokéApp v2</code></td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold text-primary">## Prérequis</td>
+                                <td>Versions nécessaires des technologies locales et outils globaux</td>
+                                <td><code>Node.js v20+, npm v10+</code></td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold text-primary">## Installation</td>
+                                <td>Les commandes étape par étape pour cloner et installer</td>
+                                <td><code>npm install</code></td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold text-primary">## Variables d'environnement</td>
+                                <td>Liste des clés secrètes nécessaires (sans les valeurs réelles !)</td>
+                                <td><code>API_KEY=votre_cle_ici</code></td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold text-primary">## Lancement</td>
+                                <td>La commande magique pour démarrer le serveur en local</td>
+                                <td><code>npm run dev</code></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="card bg-neutral text-neutral-content shadow-2xl">
+            <div class="card-body p-6 md:p-8">
+                <h3 class="card-title text-xl font-bold flex items-center gap-2 mb-2">
+                    <i class="fa-solid fa-lightbulb text-warning"></i> À retenir pour vos prochains projets
+                </h3>
+                <div class="form-control">
+                    <label class="label cursor-pointer justify-start gap-4 py-2">
+                        <input type="checkbox" checked="checked" class="checkbox checkbox-primary pointer-events-none" />
+                        <span class="label-text text-neutral-content text-sm md:text-base">La documentation s'écrit <strong>en même temps</strong> que le code, pas à la fin.</span>
+                    </label>
+                    <label class="label cursor-pointer justify-start gap-4 py-2">
+                        <input type="checkbox" checked="checked" class="checkbox checkbox-secondary pointer-events-none" />
+                        <span class="label-text text-neutral-content text-sm md:text-base">Fournissez toujours un fichier <code class="text-secondary font-mono bg-neutral-focus px-1 rounded">.env.example</code> vide mais structuré.</span>
+                    </label>
+                    <label class="label cursor-pointer justify-start gap-4 py-2">
+                        <input type="checkbox" checked="checked" class="checkbox checkbox-accent pointer-events-none" />
+                        <span class="label-text text-neutral-content text-sm md:text-base">Un bon README donne envie de tester votre code en moins de 3 lignes de terminal.</span>
+                    </label>
+                </div>
+                <div class="card-actions justify-end mt-4">
+                    <!-- <button class="btn btn-primary" onclick="alert('Super ! Mettez cela en pratique sur votre projet dès aujourd\\'hui ! 🔥')">J'ai compris la leçon !</button> -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer footer-center p-4 bg-base-300 text-base-content mt-12">
+        <div>
+            <p class="text-xs">Propulsé par Tailwind CSS & DaisyUI — Fait avec passion pour les futurs pros du dev.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

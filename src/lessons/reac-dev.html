@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue synoptique de l'emploi-type</title>
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+<body class="bg-base-200 min-h-screen p-4 md:p-8 flex flex-col items-center font-sans">
+    
+    <div class="w-full max-w-6xl bg-base-100 shadow-2xl rounded-2xl p-6 border border-base-300">
+        <a href="../../index.html" class="link">Home</a>
+        <h1 class="text-2xl md:text-3xl font-extrabold text-center text-base-content mb-8 tracking-wide uppercase">
+            Vue synoptique de l'emploi-type
+        </h1>
+
+        <div class="overflow-x-auto rounded-xl border border-gray-300">
+            <table class="table table-md w-full border-collapse">
+                <thead>
+                    <tr class="text-center font-bold text-gray-800 text-sm md:text-base border-b border-gray-300">
+                        <th class="bg-emerald-200 border-r border-gray-300 w-[8%] text-center py-4">N° Fiche AT</th>
+                        <th class="bg-emerald-200 border-r border-gray-300 w-[42%] text-left pl-6 py-4">Activités types</th>
+                        <th class="bg-amber-100 border-r border-gray-300 w-[8%] text-center py-4">N° Fiche CP</th>
+                        <th class="bg-amber-100 w-[42%] text-left pl-6 py-4">Compétences professionnelles</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr class="border-b border-gray-200 hover:bg-base-200/50 transition-colors">
+                        <td rowspan="4" class="bg-emerald-50/70 border-r border-b-2 border-gray-300 font-bold text-center text-emerald-800 text-base">1</td>
+                        <td rowspan="4" class="bg-emerald-50/70 border-r border-b-2 border-gray-300 font-semibold text-gray-800 text-sm md:text-base px-6 align-middle leading-relaxed">
+                            Développer la partie front-end d'une application web ou web mobile sécurisée
+                        </td>
+                        <td class="bg-amber-50/40 border-r border-b border-gray-200 font-bold text-center text-amber-800">1</td>
+                        <td class="bg-amber-50/20 border-b border-gray-200 font-medium text-gray-700 text-xs md:text-sm px-6 py-4">
+                            <a class="link" href="setup.html">Installer et configurer son environnement de travail en fonction du projet web ou web mobile</a>
+                        </td>
+                    </tr>
+                    <tr class="border-b border-gray-200 hover:bg-base-200/50 transition-colors">
+                        <td class="bg-amber-50/40 border-r border-b border-gray-200 font-bold text-center text-amber-800">2</td>
+                        <td class="bg-amber-50/20 border-b border-gray-200 font-medium text-gray-700 text-xs md:text-sm px-6 py-4">
+                            Maquetter des interfaces utilisateur web ou web mobile
+                        </td>
+                    </tr>
+                    <tr class="border-b border-gray-200 hover:bg-base-200/50 transition-colors">
+                        <td class="bg-amber-50/40 border-r border-b border-gray-200 font-bold text-center text-amber-800">3</td>
+                        <td class="bg-amber-50/20 border-b border-gray-200 font-medium text-gray-700 text-xs md:text-sm px-6 py-4">
+                            
+                            <a href="../exercices/dom-creation.html" class="link">Réaliser des interfaces utilisateur statiques web ou web mobile</a>
+                        </td>
+                    </tr>
+                    <tr class="border-b-2 border-gray-300 hover:bg-base-200/50 transition-colors">
+                        <td class="bg-amber-50/40 border-r border-b-2 border-gray-300 font-bold text-center text-amber-800">4</td>
+                        <td class="bg-amber-50/20 border-b-2 border-gray-300 font-medium text-gray-700 text-xs md:text-sm px-6 py-4">
+                            <a href="../exercices/dom-events.html" class="link">Développer la partie dynamique des interfaces utilisateur web ou web mobile</a>
+                        </td>
+                    </tr>
+
+                    <tr class="border-b border-gray-200 hover:bg-base-200/50 transition-colors">
+                        <td rowspan="4" class="bg-emerald-50/70 border-r border-gray-300 font-bold text-center text-emerald-800 text-base">2</td>
+                        <td rowspan="4" class="bg-emerald-50/70 border-r border-gray-300 font-semibold text-gray-800 text-sm md:text-base px-6 align-middle leading-relaxed">
+                            Développer la partie back-end d'une application web ou web mobile sécurisée
+                        </td>
+                        <td class="bg-amber-50/40 border-r border-b border-gray-200 font-bold text-center text-amber-800">5</td>
+                        <td class="bg-amber-50/20 border-b border-gray-200 font-medium text-gray-700 text-xs md:text-sm px-6 py-4">
+                            Mettre en place une base de données relationnelle
+                        </td>
+                    </tr>
+                    <tr class="border-b border-gray-200 hover:bg-base-200/50 transition-colors">
+                        <td class="bg-amber-50/40 border-r border-b border-gray-200 font-bold text-center text-amber-800">6</td>
+                        <td class="bg-amber-50/20 border-b border-gray-200 font-medium text-gray-700 text-xs md:text-sm px-6 py-4">
+                            Développer des composants d'accès aux données SQL et <a href="../exercices/api.html" class="link">NoSQL</a> 
+                        </td>
+                    </tr>
+                    <tr class="border-b border-gray-200 hover:bg-base-200/50 transition-colors">
+                        <td class="bg-amber-50/40 border-r border-b border-gray-200 font-bold text-center text-amber-800">7</td>
+                        <td class="bg-amber-50/20 border-b border-gray-200 font-medium text-gray-700 text-xs md:text-sm px-6 py-4">
+                            Développer des composants métier côté serveur
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-base-200/50 transition-colors">
+                        <td class="bg-amber-50/40 border-r font-bold text-center text-amber-800">8</td>
+                        <td class="bg-amber-50/20 font-medium text-gray-700 text-xs md:text-sm px-6 py-4">
+                            Documenter le déploiement d'une application dynamique web ou web mobile
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>

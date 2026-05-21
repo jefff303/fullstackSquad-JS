@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercices API</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body class="bg-base-200 min-h-screen">
+    <main class="container mx-auto px-4 py-6 flex flex-col gap-6 max-w-3xl">
+
+        <a class="link" href="../../index.html">Home</a>
+
+        <h1 class="text-3xl font-bold">Exercices avec des API</h1>
+
+        <section class="card bg-amber-100 shadow">
+            <div class="card-body">
+                <h2 class="card-title">PokéAPI</h2>
+                <div id="pokemonListing" class="flex flex-wrap gap-2"></div>
+            </div>
+        </section>
+
+        <section class="card bg-base-100 shadow">
+            <div id="chuckDiv" class="card-body">
+                <h2 class="card-title">Hommage à Chuck Norris (Rip in Peace)</h2>
+                <button id="call-chuck" class="btn">LOL la blague</button>
+                <p id="chuckNorrisFact" class="text-base-content/80"></p>
+            </div>
+        </section>
+
+    </main>
+    <script type="module" src="api.js"></script>
+</body>
+
+</html>
