@@ -157,5 +157,9 @@ document.addEventListener('keyup',(clavierEvent)=>{
 })
 
 //!Exercice DOM Events (keyup)
-// const myInput = document.querySelectorAll("input");
-// console.log(myInput.value);
+const myInput = document.querySelector("#input-exercice-keyup");
+const paragraphRender = document.querySelector('#renderKeyboard')
+myInput.addEventListener('keyup',()=>{
+paragraphRender.innerText = myInput.value
+})
+console.log(myInput);
