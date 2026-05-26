@@ -111,55 +111,39 @@ document.addEventListener('mouseleave',()=>{
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //! Ecouter le clavier en passant par l'event 
-document.addEventListener('keyup',(clavierEvent)=>{
-    console.log(clavierEvent);
-    console.log(clavierEvent.key);
-    
-
-})
+// document.addEventListener('keyup',(clavierEvent)=>{
+//     console.log(clavierEvent);
+//     console.log(clavierEvent.key);
+// });
 
 //!Exercice DOM Events (keyup)
 const myInput = document.querySelector("#input-exercice-keyup");
-const paragraphRender = document.querySelector('#renderKeyboard')
-myInput.addEventListener('keyup',()=>{
-paragraphRender.innerText = myInput.value
-})
-console.log(myInput);
+const paragraphRender = document.querySelector('#renderKeyboard');
+myInput.addEventListener('keypress',()=>{
+paragraphRender.innerText = myInput.value;
+});
+
+
+//!Exercice DOM Events (keyup pour bloquer un button)
+const inputBlockButton = document.querySelector('#input-exercice-keyup-block-button');
+const buttonBlockButton = document.querySelector('#button-exercice-keyup-block-button');
+
+inputBlockButton.addEventListener('keyup',()=>{
+
+    // ? Mode cond ternaires
+    buttonBlockButton.disabled = inputBlockButton.value.length>=5 ? true : false;
+    // ? Mode IF classique 
+    // if(inputBlockButton.value.length>=5){
+    //    buttonBlockButton.disabled = true;
+    // }
+    // else{
+    //     buttonBlockButton.disabled = false
+    // }
+});
+
+
+//!Exercice Modif DOM + setTimeout
+setTimeout(()=>{
+    document.body.style.backgroundColor = 'PaleTurquoise';
+},3000);
