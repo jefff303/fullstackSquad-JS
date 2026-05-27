@@ -143,7 +143,3 @@ inputBlockButton.addEventListener('keyup',()=>{
 });
 
 
-//!Exercice Modif DOM + setTimeout
-setTimeout(()=>{
-    document.body.style.backgroundColor = 'PaleTurquoise';
-},3000);

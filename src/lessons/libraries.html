@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/src/style.css">
+  <title>Leçon : Les librairies en JavaScript</title>
+</head>
+
+<body class="min-h-screen">
+  <div class="drawer min-h-screen">
+    <input id="drawer-toggle" type="checkbox" class="drawer-toggle" />
+    <div class="drawer-content flex flex-col min-h-screen">
+      <!-- Navbar -->
+      <div id="navbar-container"></div>
+
+      <!-- Main Content -->
+      <main class="flex-1 container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+        <a class="link " href="../../index.html">Home</a>
+        <!-- En-tête -->
+        <h1 class="text-4xl font-bold mb-4">Les librairies en JavaScript</h1>
+        <p class="text-lg text-base-content/70 max-w-2xl mb-6">
+          Découvrez comment utiliser des librairies dans vos projets, que ce soit avec un 
+          <span class="font-semibold">lien CDN</span> ou via <span class="font-semibold">npm</span>.
+        </p>
+
+        <!-- Section : Introduction -->
+        <div class="card bg-base-100 shadow-xl mb-6">
+          <div class="card-body">
+            <h2 class="card-title">Qu’est-ce qu’une librairie ?</h2>
+            <p>
+              Une librairie est un ensemble de fonctions ou de composants prêts à l’emploi, 
+              qui vous aide à coder plus rapidement. Exemple : <strong>jQuery</strong>, 
+              <strong>Lodash</strong>, <strong>Chart.js</strong>, etc.
+            </p>
+          </div>
+        </div>
+
+        <!-- Section : CDN -->
+        <div class="card bg-base-200 shadow-lg mb-6">
+          <div class="card-body">
+            <h2 class="card-title">Utilisation via CDN</h2>
+            <p>
+              Le <span class="font-semibold">CDN</span> (Content Delivery Network) permet de charger une librairie
+              directement depuis un serveur externe, en ajoutant une balise <code>&lt;script&gt;</code>.
+            </p>
+            <pre class="mockup-code"><code>
+<!-- Exemple : Charger jQuery depuis un CDN -->
+&lt;script src="https://code.jquery.com/jquery-3.7.1.min.js"&gt;&lt;/script&gt;
+
+&lt;script&gt;
+  $(document).ready(function(){
+    console.log("jQuery est prêt !");
+  });
+&lt;/script&gt;
+            </code></pre>
+            <p class="mt-2">✅ Avantage : rapide à mettre en place.  
+              ❌ Inconvénient : dépend d’internet et de la disponibilité du serveur CDN.
+            </p>
+          </div>
+        </div>
+
+        <!-- Section : npm install -->
+        <div class="card bg-primary text-primary-content shadow-xl mb-6">
+          <div class="card-body">
+            <h2 class="card-title">Utilisation avec npm</h2>
+            <p>
+              Avec un gestionnaire de paquets comme <strong>npm</strong> ou <strong>pnpm</strong>, 
+              vous pouvez installer vos librairies dans votre projet.
+            </p>
+            <pre class="mockup-code"><code>
+# Installation de Lodash
+npm install lodash
+
+# Ou avec pnpm
+pnpm add lodash
+            </code></pre>
+            <p>
+              Ensuite vous pouvez l’utiliser dans votre code :
+            </p>
+            <pre class="mockup-code"><code>
+import _ from "lodash";
+
+const numbers = [1, 2, 3, 4, 5];
+console.log(_.shuffle(numbers)); 
+// Exemple : mélange le tableau
+            </code></pre>
+          </div>
+        </div>
+
+        <!-- Section : Exemples de librairies -->
+        <div class="card bg-accent text-accent-content shadow-lg mb-6">
+          <div class="card-body">
+            <h2 class="card-title">Exemples de librairies utiles</h2>
+            <ul class="list-disc ml-6">
+              <li><strong>Axios</strong> : pour faire des requêtes HTTP plus simples que <code>fetch</code>.</li>
+              <li><strong>Day.js</strong> : pour manipuler les dates facilement.</li>
+              <li><strong>Chart.js</strong> : pour créer des graphiques interactifs.</li>
+              <li><strong>Lodash</strong> : utilitaires pour les tableaux, objets, chaînes de caractères.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Section : Exercice -->
+        <div class="card bg-secondary text-secondary-content shadow-lg">
+          <div class="card-body">
+            <h2 class="card-title">🚀 Exercice pratique</h2>
+            <p>
+              Installez <code>dayjs</code> avec <code>npm</code> ou <code>pnpm</code>, puis affichez la date et l’heure
+              actuelles formatées dans la console.
+            </p>
+          </div>
+        </div>
+
+      </main>
+
+      <!-- Footer -->
+      <div id="footer-container"></div>
+    </div>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
